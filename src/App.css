@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap');
+
+body {
+  background-color: #0f1115;
+  color: #e0e0e0;
+  font-family: 'Cairo', 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #161a20; 
+}
+::-webkit-scrollbar-thumb {
+  background: #444; 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffc107; 
+}
+
+.navbar-custom {
+  background-color: rgba(15, 17, 21, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #333;
+}
+
+.btn-paribu {
+  background: linear-gradient(45deg, #ff6a00, #ff8c00);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-paribu:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 106, 0, 0.4);
+  color: white;
+}
+
+.movie-card {
+  background-color: #161a20;
+  border: 1px solid #2a2e35;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff6a00;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-img-top {
+  object-fit: cover;
+}
+
+.booking-modal-content {
+  background-color: #1a1d23;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.screen-container {
+  margin-bottom: 20px;
+  perspective: 500px;
+}
+
+.cinema-screen {
+  height: 15px;
+  width: 80%;
+  margin: 0 auto;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 50%, rgba(255,255,255,0) 100%);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(255,255,255,0.2);
+  transform: rotateX(-15deg);
+}
+
+.seat-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.seat {
+  width: 32px;
+  height: 32px;
+  background-color: #444;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  font-size: 10px;
+  color: transparent;
+}
+
+.seat.selected {
+  background-color: #ffc107;
+  color: black;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.6);
+  transform: scale(1.1);
+  font-weight: bold;
+}
+
+.seat.reserved {
+  background-color: #d9534f;
+  color: white;
+  cursor: not-allowed;
+  opacity: 0.5;
+  box-shadow: none;
+}
+
+.seat:not(.reserved):hover {
+  background-color: #666;
+  transform: scale(1.1);
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+  margin-left: 6px;
+}
+.legend-dot.empty { background: #444; }
+.legend-dot.selected { background: #ffc107; }
+.legend-dot.full { background: #d9534f; }
+
+.btn-confirm-selection {
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s;
+}
+
+.btn-confirm-selection:hover {
+  background-color: #e0a800;
+  color: #000;
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+}
+
+.form-control::placeholder {
+  color: #bbbbbb !important;
+  opacity: 1;
+}
+
+.form-control {
+  color: white !important;
+}
+
+html[lang="ar"] body {
+  font-family: 'Cairo', sans-serif;
+}
+
+html[lang="ar"] .ms-auto {
+  margin-right: auto !important;
+  margin-left: 0 !important;
+}
+
+html[lang="ar"] .me-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}
+
+html[lang="ar"] .ms-2 {
+  margin-right: 0.5rem !important;
+  margin-left: 0 !important;
+}
+
+html[lang="ar"] .me-2 {
+  margin-left: 0.5rem !important;
+  margin-right: 0 !important;
+}
+
+html[lang="ar"] .ps-3 {
+  padding-right: 1rem !important;
+  padding-left: 0 !important;
+}
+
+html[lang="ar"] .pe-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0 !important;
+}
+
+@media (max-width: 991px) {
+  html[lang="ar"] .navbar-custom .container-fluid {
+    flex-direction: row;
+  }
+  
+  html[lang="ar"] .navbar-custom .d-flex.align-items-center.ms-auto {
+    margin-right: auto !important;
+    flex-direction: row;
+  }
+
+  html[lang="ar"] .navbar-toggler {
+    margin-right: 10px;
+  }
+}
+
+html[lang="ar"] .dropdown-menu {
+  text-align: right;
+  right: 0 !important;
+  left: auto !important;
+}
+
+html[lang="ar"] .form-control {
+  text-align: right;
+}

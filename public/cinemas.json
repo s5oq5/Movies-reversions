@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "city": "İstanbul",
+    "city_en": "Istanbul",
+    "city_ar": "إسطنبول",
+    "name": "Paribu Cineverse Kanyon",
+    "name_en": "Paribu Cineverse Kanyon",
+    "name_ar": "باريبو سينفيرس كانيون",
+    "halls": ["IMAX", "Gold Class"]
+  },
+  {
+    "id": 2,
+    "city": "İstanbul",
+    "city_en": "Istanbul",
+    "city_ar": "إسطنبول",
+    "name": "Paribu Cineverse Zorlu Center",
+    "name_en": "Paribu Cineverse Zorlu Center",
+    "name_ar": "باريبو سينفيرس زورلو سنتر",
+    "halls": ["IMAX", "Platinum"]
+  },
+  {
+    "id": 3,
+    "city": "İstanbul",
+    "city_en": "Istanbul",
+    "city_ar": "إسطنبول",
+    "name": "Cinemaximum Akasya",
+    "name_en": "Cinemaximum Akasya",
+    "name_ar": "سينماكسيموم أكاسيا",
+    "halls": ["Standard", "4DX"]
+  },
+  {
+    "id": 4,
+    "city": "İstanbul",
+    "city_en": "Istanbul",
+    "city_ar": "إسطنبول",
+    "name": "Atlas 1948 Sineması",
+    "name_en": "Atlas 1948 Cinema",
+    "name_ar": "سينما أطلس 1948",
+    "halls": ["Tarihi Salon"]
+  },
+  {
+    "id": 5,
+    "city": "İstanbul",
+    "city_en": "Istanbul",
+    "city_ar": "إسطنبول",
+    "name": "Paribu Cineverse İstinyePark",
+    "name_en": "Paribu Cineverse IstinyePark",
+    "name_ar": "باريبو سينفيرس إستينيا بارك",
+    "halls": ["IMAX", "Gold Class"]
+  },
+  {
+    "id": 6,
+    "city": "Ankara",
+    "city_en": "Ankara",
+    "city_ar": "أنقرة",
+    "name": "Paribu Cineverse Panora",
+    "name_en": "Paribu Cineverse Panora",
+    "name_ar": "باريبو سينفيرس بانورا",
+    "halls": ["Gold Class"]
+  },
+  {
+    "id": 7,
+    "city": "Ankara",
+    "city_en": "Ankara",
+    "city_ar": "أنقرة",
+    "name": "Büyülü Fener Kızılay",
+    "name_en": "Buyulu Fener Kizilay",
+    "name_ar": "بويولو فينير كيزيلاي",
+    "halls": ["Standard"]
+  },
+  {
+    "id": 8,
+    "city": "Ankara",
+    "city_en": "Ankara",
+    "city_ar": "أنقرة",
+    "name": "Paribu Cineverse ANKAmall",
+    "name_en": "Paribu Cineverse ANKAmall",
+    "name_ar": "باريبو سينفيرس أنكامول",
+    "halls": ["IMAX"]
+  },
+  {
+    "id": 9,
+    "city": "İzmir",
+    "city_en": "Izmir",
+    "city_ar": "إزمير",
+    "name": "Paribu Cineverse İzmir Optimum",
+    "name_en": "Paribu Cineverse Izmir Optimum",
+    "name_ar": "باريبو سينفيرس إزمير أوبتيموم",
+    "halls": ["Standard", "4DX"]
+  },
+  {
+    "id": 10,
+    "city": "İzmir",
+    "city_en": "Izmir",
+    "city_ar": "إزمير",
+    "name": "Karaca Sineması",
+    "name_en": "Karaca Cinema",
+    "name_ar": "سينما كاراجا",
+    "halls": ["Standard"]
+  },
+  {
+    "id": 11,
+    "city": "Bursa",
+    "city_en": "Bursa",
+    "city_ar": "بورصة",
+    "name": "Paribu Cineverse Sur Yapı Marka",
+    "name_en": "Paribu Cineverse Sur Yapi Marka",
+    "name_ar": "باريبو سينفيرس سور يابي ماركا",
+    "halls": ["IMAX"]
+  },
+  {
+    "id": 12,
+    "city": "Antalya",
+    "city_en": "Antalya",
+    "city_ar": "أنطاليا",
+    "name": "Paribu Cineverse Migros AVM",
+    "name_en": "Paribu Cineverse Migros AVM",
+    "name_ar": "باريبو سينفيرس ميغروس",
+    "halls": ["Standard"]
+  },
+  {
+    "id": 13,
+    "city": "Bartın",
+    "city_en": "Bartin",
+    "city_ar": "بارتين",
+    "name": "Bartın Kültür Merkezi Sineması",
+    "name_en": "Bartin Cultural Center Cinema",
+    "name_ar": "سينما مركز بارتين الثقافي",
+    "halls": ["Salon 1", "Salon 2"]
+  }
+]
