@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Container, Row, Col, Card, Button, Carousel, Spinner } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import MovieCard from './MovieCard';
@@ -83,11 +83,11 @@ const Home = ({ activeTab, setActiveTab, searchTerm, user, onToggleFavorite }) =
       .finally(() => setLoading(false));
   }, []);
 
-  const getMovieTitle = (movie) => {
+  const getMovieTitle = useCallback((movie) => {
     if (language === 'en') return movie.title_en || movie.title;
     if (language === 'ar') return movie.title_ar || movie.title;
     return movie.title;
-  };
+  }, [language]);
 
   useEffect(() => {
     if (activeTab === 'Home' || activeTab === 'Filmler') {
@@ -97,7 +97,7 @@ const Home = ({ activeTab, setActiveTab, searchTerm, user, onToggleFavorite }) =
       );
       setFilteredMovies(result);
     }
-  }, [searchTerm, movies, activeTab, vizyonMovies, language]);
+  }, [searchTerm, movies, activeTab, vizyonMovies, language, getMovieTitle]);
 
   const handleBookClick = (movie) => {
     navigate(`/movie/${movie.id}`);

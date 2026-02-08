@@ -11,7 +11,6 @@ const CustomNavbar = ({ activeTab, setActiveTab, searchTerm, setSearchTerm, user
   const [expanded, setExpanded] = useState(false); 
 
   const [allMovies, setAllMovies] = useState([]);
-  const [allCinemas, setAllCinemas] = useState([]);
 
   const tabs = [
     { key: 'Filmler', label: t.movies },
@@ -22,7 +21,6 @@ const CustomNavbar = ({ activeTab, setActiveTab, searchTerm, setSearchTerm, user
   
   useEffect(() => {
     fetch('/movies.json').then(res => res.json()).then(data => { if (Array.isArray(data)) setAllMovies(data); });
-    fetch('/cinemas.json').then(res => res.json()).then(data => { if (Array.isArray(data)) setAllCinemas(data); });
   }, []);
 
   const closeMenu = () => setExpanded(false);

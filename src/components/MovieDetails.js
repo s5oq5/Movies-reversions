@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Row, Col, Card, Button, Badge, Form, Spinner, Modal } from 'react-bootstrap';
 import { useLanguage } from '../LanguageContext';
@@ -36,12 +36,12 @@ const MovieDetails = ({ user }) => {
   };
   const lt = localT[language];
 
-  const getLocalized = (item, field) => {
+  const getLocalized = useCallback((item, field) => {
     if (!item) return "";
     if (language === 'en') return item[`${field}_en`] || item[field];
     if (language === 'ar') return item[`${field}_ar`] || item[field];
     return item[field];
-  };
+  }, [language]);
 
   useEffect(() => {
     setLoading(true);
@@ -60,7 +60,7 @@ const MovieDetails = ({ user }) => {
       fetch('/movies.json').then(res => res.json()),
       fetch('/cinemas.json').then(res => res.json())
     ]).then(([moviesData, cinemasData]) => {
-      const foundMovie = moviesData.find(m => m.id == id);
+      const foundMovie = moviesData.find(m => m.id === Number(id));
       setMovie(foundMovie);
       setCinemas(cinemasData);
       
@@ -95,7 +95,7 @@ const MovieDetails = ({ user }) => {
     setDates(nextDates);
     setSelectedDate(nextDates[0]);
 
-  }, [id, language]);
+  }, [id, language, getLocalized]);
 
   const handleCityChange = (e) => {
     const newCity = e.target.value;
